@@ -84,8 +84,9 @@ class Models():
 
         if not self.insight106_model:
             self.insight106_model = onnxruntime.InferenceSession('./models/2d106det.onnx', providers=self.providers)
-            
-        points = self.detect_insight106(img)   
+
+        points = self.detect_insight106(img)
+        return points
     
     def delete_models(self):
 
